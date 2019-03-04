@@ -10,6 +10,13 @@ function SomeDirective() {
 		},
 		controllerAs: 'some',
 		link: function (scope, elem, attrs) {
+			// let wholeElem = elem[0]
+			// let counterElem = wholeElem.querySelector('h3')
+			// console.log(scope)
+			window.addEventListener('keydown', () => {
+				scope.counter++
+				scope.$apply()
+			})
 
 		}
 	}
